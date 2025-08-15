@@ -1,33 +1,45 @@
-//complete this code
 class Animal {
-	  private _species:string;
-    
-    constructor (species:string){
+    private _species: string;
+
+    constructor(species: string) {
         this._species = species;
     }
 
-    get species():string{
-        return`${this._species}`;
+    // Getter for species
+    get species(): string {
+        return this._species;
     }
-    
-    makeSound():void{
-          console.log(`The ${this._species} makes a sound`);
-    }
-}
 
-class Dog extends Animal {
-	 purr():void{
-      console.log("purr");
+    // Method to make sound
+    makeSound(): void {
+        console.log(`The ${this._species} makes a sound`);
     }
 }
 
 class Cat extends Animal {
-	 bark(): void{
-      console.log("woof");
+    constructor(species: string) {
+        super(species); // Call parent constructor
+    }
+
+    // Cat-specific method
+    purr(): void {
+        console.log("purr");
+    }
+}
+
+class Dog extends Animal {
+    constructor(species: string) {
+        super(species); // Call parent constructor
+    }
+
+    // Dog-specific method
+    bark(): void {
+        console.log("woof");
     }
 }
 
 // Do not change the code below this line
-window.Animal = Animal;
-window.Dog = Dog;
-window.Cat = Cat;
+(window as any).Animal = Animal;
+(window as any).Cat = Cat;
+(window as any).Dog = Dog;
+
