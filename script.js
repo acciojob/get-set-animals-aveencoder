@@ -7,7 +7,7 @@ class Animal {
     }
 
     get species():string{
-        return`The ${this._species} of the animal`;
+        return`${this._species}`;
     }
     
     makeSound():void{
