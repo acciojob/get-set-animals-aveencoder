@@ -17,7 +17,9 @@ class Animal {
 }
 
 class Cat extends Animal {
-   
+   constructor(species) {
+	   super(species);
+   }
 
     // Cat-specific method
     purr(): void {
@@ -26,6 +28,9 @@ class Cat extends Animal {
 }
 
 class Dog extends Animal {
+	constructor(species) {
+		super(species);
+	}
 
     // Dog-specific method
     bark(): void {
