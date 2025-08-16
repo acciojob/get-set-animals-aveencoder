@@ -55,7 +55,7 @@ myDog.bark();
 // Expected Output: woof
 
 // Do not change the code below this line
-(window as any).Animal = Animal;
-(window as any).Cat = Cat;
-(window as any).Dog = Dog;
+window.Animal = Animal;
+window.Cat = Cat;
+window.Dog = Dog;
 
