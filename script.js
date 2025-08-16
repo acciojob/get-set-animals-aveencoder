@@ -1,17 +1,17 @@
 class Animal {
-    private _species: string;
+    private _species;
 
-    constructor(species: string) {
+    constructor(species) {
         this._species = species;
     }
 
     // Getter for species
-    get species(): string {
+    get species() {
         return this._species;
     }
 
     // Method to make sound
-    makeSound(): void {
+    makeSound() {
         console.log(`The ${this._species} makes a sound`);
     }
 }
@@ -22,7 +22,7 @@ class Cat extends Animal {
    }
 
     // Cat-specific method
-    purr(): void {
+    purr() {
         console.log("purr");
     }
 }
@@ -33,7 +33,7 @@ class Dog extends Animal {
 	}
 
     // Dog-specific method
-    bark(): void {
+    bark() {
         console.log("woof");
     }
 }
